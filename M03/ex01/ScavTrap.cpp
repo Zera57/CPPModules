@@ -52,7 +52,7 @@ void ScavTrap::beRepaired(unsigned int amount) {
     HitPoints += amount;
     if (HitPoints > MaxHitPoints) {
         amount -= HitPoints - MaxHitPoints;
-        HitPoints = 100;
+        HitPoints = MaxHitPoints;
     }
     std::cout << "SC4V-TP repaired by " << amount << " points." << std::endl;
     std::cout << "Now " << Name << " have " << HitPoints << " Hitpoints." << std::endl;
