@@ -1,22 +1,17 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -std=c++98 -g
+CXX_FLAGS := -Wall -Wextra -std=c++98
 
-BIN		:= bin
-SRC		:= src
-INCLUDE	:= include
-LIB		:= lib
-
-LIBRARIES	:=
 EXECUTABLE	:= megaphone
 
+SRC := main.cpp
 
-all: $(BIN)/$(EXECUTABLE)
+all: $(EXECUTABLE)
 
 run: clean all
-	./$(BIN)/$(EXECUTABLE)
+	./$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+$(EXECUTABLE): $(SRC)
+	$(CXX) $(CXX_FLAGS) $^ -o $@
 
 clean:
-	-rm $(BIN)/*
+	-rm -r $(EXECUTABLE)
