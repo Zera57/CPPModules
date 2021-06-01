@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(std::string name) : MaxHitPoints(100), MaxEnergyPoints(100) {
+    std::cout << "I'm FR4G-TP and I'm ALLIIIIVEEE!" << std::endl;
     HitPoints = 100;
     EnergyPoints = 100;
     Level = 1;
@@ -11,7 +12,7 @@ FragTrap::FragTrap(std::string name) : MaxHitPoints(100), MaxEnergyPoints(100) {
 }
 
 FragTrap::~FragTrap() {
-
+    std::cout << "I'm FR4G-TP and I'm dead!(" << std::endl;
 }
 
 void FragTrap::rangedAttack(const std::string &target) {
