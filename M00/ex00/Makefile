@@ -1,5 +1,5 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -std=c++98
+CXX_FLAGS := -Wall -Wextra -Werror -std=c++98
 
 EXECUTABLE	:= megaphone
 

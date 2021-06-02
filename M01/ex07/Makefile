@@ -1,5 +1,5 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -g
+CXX_FLAGS := -Wall -Wextra -Werror -std=c++17 -g
 
 BIN		:= bin
 SRC		:= src
