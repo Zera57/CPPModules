@@ -12,7 +12,7 @@ const std::string randChallanger[5] = {
         "Insane Rat"
 };
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 
     public:
         ScavTrap(std::string name);

@@ -12,7 +12,7 @@ const std::string randNinjaAttack[5] = {
         "just one punch"
 };
 
-class NinjaTrap : public ClapTrap {
+class NinjaTrap : virtual public ClapTrap {
 
     public:
         NinjaTrap(std::string name);

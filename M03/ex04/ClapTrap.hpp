@@ -2,6 +2,7 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
+#include <stdlib.h>
 
 class ClapTrap {
 
@@ -12,7 +13,6 @@ class ClapTrap {
         void meleeAttack(std::string const & target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        void challengeNewcomer();
         std::string GetName();
 
     protected:

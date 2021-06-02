@@ -12,7 +12,7 @@ const std::string randAttack[5] = {
         "Punch"
 };
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 
     public:
         FragTrap(std::string name);
