@@ -2,4 +2,5 @@
 *.dSYM
 *.out
 *test*
+intra/
 .DS_Store
