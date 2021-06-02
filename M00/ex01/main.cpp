@@ -6,7 +6,7 @@
 /*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 15:01:27 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/18 15:23:58 by hapryl           ###   ########.fr       */
+/*   Updated: 2021/06/02 18:46:26 by hapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int     main() {
 			std::getline(std::cin, list[i].underwear_color);
 			std::cout << "Input darkest_secret: " << std::endl;
 			std::getline(std::cin, list[i].darkest_secret);
-			if (i < 8)
+			if (i < 7)
 				i++;
 		}
 		else if (!str.compare("SEARCH"))
@@ -90,8 +90,11 @@ int     main() {
 				std::cout << "Invalid argument"<< std::endl;
 				continue;
 			}
-			if (j > i - 1 || j < 0)
+			if (j > i || j < 0)
+			{
+				std::cout << "Index out of range"<< std::endl;
 				continue;
+			}
 			std::cout << "first_name:\t\t" << list[j].first_name << std::endl;
 			std::cout << "last_name:\t\t" << list[j].last_name << std::endl;
 			std::cout << "nickname:\t\t" << list[j].nickname << std::endl;

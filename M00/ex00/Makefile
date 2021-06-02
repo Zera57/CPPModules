@@ -3,7 +3,7 @@ CXX_FLAGS := -Wall -Wextra -Werror -std=c++98
 
 EXECUTABLE	:= megaphone
 
-SRC := main.cpp
+SRC := megathone.cpp
 
 all: $(EXECUTABLE)
 
