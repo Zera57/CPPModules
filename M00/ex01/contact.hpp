@@ -1,16 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/17 15:41:02 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/18 13:39:50 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
-#include <string>
+#include <iostream>
 
 class Contact {
 	public:
@@ -30,3 +21,5 @@ class Contact {
 	bool IsEmpty();
 	
 };
+
+#endif
