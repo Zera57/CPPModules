@@ -1,14 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 12:46:38 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/19 17:50:18 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef ZOMBIEHORDE_HPP
+#define ZOMBIEHORDE_HPP
 
 #include "Zombie.hpp"
 
@@ -25,3 +16,5 @@ class ZombieHorde {
 		std::string *namesOfZombie;
 		std::string *typesOfZombie;
 };
+
+#endif

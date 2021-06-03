@@ -1,22 +1,18 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -Werror -std=c++17 -g
+CXX_FLAGS := -Wall -Wextra -Werror -std=c++98
 
-BIN		:= bin
-SRC		:= src
-INCLUDE	:= include
-LIB		:= lib
+EXECUTABLE	:= replace
 
-LIBRARIES	:=
-EXECUTABLE	:= test
+SRC :=	main.cpp \
+		contact.cpp
 
-
-all: $(BIN)/$(EXECUTABLE)
+all: $(EXECUTABLE)
 
 run: clean all
-	./$(BIN)/$(EXECUTABLE)
+	./$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+$(EXECUTABLE): $(SRC)
+	$(CXX) $(CXX_FLAGS) $^ -o $@
 
 clean:
-	-rm $(BIN)/*
+	-rm -r $(EXECUTABLE)

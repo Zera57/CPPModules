@@ -1,17 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 14:56:46 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/19 18:17:26 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
-#include <string>
+
 
 class Zombie {
 	private:
@@ -22,3 +13,5 @@ class Zombie {
 		Zombie(std::string _name, std::string _type);
 		void announce();
 };
+
+#endif

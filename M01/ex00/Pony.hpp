@@ -1,17 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 14:56:46 by hapryl            #+#    #+#             */
-/*   Updated: 2021/05/07 14:29:34 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef PONY_HPP
+#define PONY_HPP
 
 #include <iostream>
-#include <string>
 
 class Pony {
 	std::string	name;
@@ -26,3 +16,5 @@ class Pony {
 
 void ponyOnTheStack();
 void ponyOnTheHeap();
+
+#endif

@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 12:46:38 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/20 15:29:13 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include "Weapon.hpp"
-
-#pragma once
 
 class HumanA {
 
@@ -25,3 +14,5 @@ class HumanA {
 		std::string	_name;
 		Weapon&		_weapon;
 };
+
+#endif

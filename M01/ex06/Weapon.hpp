@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hapryl <hapryl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/20 14:19:31 by hapryl            #+#    #+#             */
-/*   Updated: 2021/04/20 15:23:36 by hapryl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <iostream>
-
-#pragma once
 
 class Weapon {
 	
@@ -25,3 +14,5 @@ class Weapon {
 	private:
 		std::string	_type;
 };
+
+#endif
