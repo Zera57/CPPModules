@@ -3,18 +3,20 @@
 
 #include "Victim.hpp"
 
-class Peon : Victim {
+class Peon : public Victim {
 
     public:
         Peon(std::string name);
         ~Peon();
 		Peon(const Peon&);
 		void operator = (const Peon& s);
-		std::ostream & operator << (std::ostream &out);
-		void getPolymorphed() const;
+		virtual void getPolymorphed() const;
+		std::string GetName() const;
 
 	protected:
 		std::string _name;
 };
+
+std::ostream & operator<< (std::ostream &out, Peon const& p);
 
 #endif

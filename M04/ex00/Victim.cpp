@@ -1,8 +1,8 @@
 #include "Victim.hpp"
 
 Victim::Victim(std::string name) {
-	std::cout  << "Some random victim called " << _name << " just appeared!" << std::endl;
 	_name = name;
+	std::cout  << "Some random victim called " << _name << " just appeared!" << std::endl;
 }
 
 Victim::~Victim() {
@@ -17,8 +17,12 @@ void Victim::operator = (const Victim& v) {
 	_name = v._name;
 }
 
-std::ostream & Victim::operator << (std::ostream &out) {
-	return out << "I'm" << _name << " and I like otters!" << std::endl;
+std::string Victim::GetName() const {
+	return _name;
+}
+
+std::ostream & operator << (std::ostream &out, Victim const& v) {
+	return out << "I'm " << v.GetName() << " and I like otters!" << std::endl;
 }
 
 void Victim::getPolymorphed() const {

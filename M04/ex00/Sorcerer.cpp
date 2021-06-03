@@ -1,9 +1,9 @@
 #include "Sorcerer.hpp"
 
 Sorcerer::Sorcerer(std::string name, std::string title) {
-	std::cout  << _name << ", " << _title << ", is born!" << std::endl;
 	_name = name;
 	_title = title;
+	std::cout  << _name << ", " << _title << ", is born!" << std::endl;
 }
 
 Sorcerer::~Sorcerer() {
@@ -19,8 +19,16 @@ void Sorcerer::operator = (const Sorcerer& s) {
 	_title = s._title;
 }
 
-std::ostream & Sorcerer::operator << (std::ostream &out) {
-	return out << "I am " << _name << ", " << _title << ", and I like ponies!" << std::endl;
+std::string Sorcerer::GetName() const {
+	return _name;
+}
+
+std::string Sorcerer::GetTitle() const {
+	return _title;
+}
+
+std::ostream & operator<< (std::ostream &out, Sorcerer const& s) {
+	return out << "I am " << s.GetName() << ", " << s.GetTitle() << ", and I like ponies!" << std::endl;
 }
 
 void Sorcerer::polymorph(Victim const & v) const {

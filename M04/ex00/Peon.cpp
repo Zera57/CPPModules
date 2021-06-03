@@ -1,16 +1,20 @@
 #include "Peon.hpp"
 
 Peon::Peon(std::string name) : Victim(name) {
-	std::cout  << "Some random Peon called " << _name << " just appeared!" << std::endl;
 	_name = name;
+	std::cout  << "Zog zog." << std::endl;
 }
 
 Peon::~Peon() {
-	std::cout  << "Peon " << _name << " just died for no apparent reason!" << std::endl;
+	std::cout  << "Bleuark..." << std::endl;
 }
 
-std::ostream & Peon::operator << (std::ostream &out) {
-	return out << "I'm" << _name << " and I like otters!" << std::endl;
+std::string Peon::GetName() const {
+	return _name;
+}
+
+std::ostream & operator<< (std::ostream &out, Peon const& p) {
+	return out << "I'm " << p.GetName() << " and I like otters!" << std::endl;
 }
 
 void Peon::getPolymorphed() const {

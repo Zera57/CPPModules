@@ -11,10 +11,13 @@ class Victim{
 		Victim(const Victim&);
 		void operator = (const Victim& s);
 		std::ostream & operator << (std::ostream &out);
-		void getPolymorphed() const;
+		virtual void getPolymorphed() const;
+		std::string GetName() const;
 
 	protected:
 		std::string _name;
 };
+
+std::ostream & operator<< (std::ostream &out, Victim const& v);
 
 #endif
