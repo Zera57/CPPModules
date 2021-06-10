@@ -3,8 +3,7 @@ CXX_FLAGS := -Wall -Wextra -Werror -std=c++98
 
 EXECUTABLE	:= replace
 
-SRC :=	main.cpp \
-		contact.cpp
+SRC :=	main.cpp
 
 all: $(EXECUTABLE)
 
