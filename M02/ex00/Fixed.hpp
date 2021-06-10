@@ -1,6 +1,7 @@
-#include <iostream>
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-#pragma once
+#include <iostream>
 
 class Fixed {
 
@@ -16,3 +17,5 @@ class Fixed {
 		int					point;
 		static const int	fractional = 8;
 };
+
+#endif
