@@ -1,11 +1,5 @@
 #include <iostream>
 
-char    to_upper(char c) {
-    if (c >= 'a' && c <= 'z')
-        return c - 'a' + 'A';
-    return c;
-}
-
 int     main(int arg, char **argc) {
     
     if (arg < 2)
@@ -15,7 +9,7 @@ int     main(int arg, char **argc) {
         for (size_t i = 1; argc[i]; i++)
         {
             for (size_t j = 0; argc[i][j]; j++)
-                std::cout << to_upper(argc[i][j]);
+                std::cout << (char)toupper(argc[i][j]);
         }
     }
     std::cout << std::endl;
