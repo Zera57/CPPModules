@@ -16,14 +16,19 @@ ZombieHorde::ZombieHorde(int N) {
 	for (int i = 0; i < N; i++)
 		horde[i] = this->randomChump();
 	count = N;
+	announce();
+}
+
+ZombieHorde::~ZombieHorde() {
+	for (int i = 0; i < count; i++)
+		delete(horde[i]);	
 }
 
 Zombie* ZombieHorde::randomChump() {
 	return (new Zombie(namesOfZombie[rand() % 4], typesOfZombie[rand() % 4]));
 }
 
-void	ZombieHorde::announce()
-{
+void	ZombieHorde::announce() {
 	for (int i = 0; i < count; i++)
 		horde[i]->announce();
 }

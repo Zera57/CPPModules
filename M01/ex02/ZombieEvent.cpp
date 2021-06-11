@@ -9,8 +9,8 @@ ZombieEvent::ZombieEvent() {
 	typesOfZombie = new std::string[4];
 	typesOfZombie[0] = "STUPID";
 	typesOfZombie[1] = "SILLY";
-	typesOfZombie[2] = "Tank";
-	typesOfZombie[3] = "Lox";
+	typesOfZombie[2] = "Strong";
+	typesOfZombie[3] = "Tank";
 	srand( time(0) );
 }
 
@@ -26,7 +26,7 @@ Zombie*	ZombieEvent::newZombie(std::string name) {
 }
 
 Zombie* ZombieEvent::randomChump() {
-	Zombie *zomb = new Zombie(namesOfZombie[rand() % 4], typesOfZombie[rand() % 3]);
+	Zombie *zomb = newZombie(namesOfZombie[rand() % 4]);
 	zomb->announce();
 	return (zomb);
 }

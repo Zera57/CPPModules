@@ -4,6 +4,13 @@
 #include <iostream>
 #include "Zombie.hpp"
 
+enum ZombieTypes {
+	STUPID,
+	SILLY,
+	Strong,
+	Tank
+};
+
 class ZombieEvent {
 	public:
 		std::string *namesOfZombie;

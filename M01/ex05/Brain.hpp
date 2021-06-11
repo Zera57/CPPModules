@@ -7,8 +7,10 @@
 class Brain {
 
 	private:
+		int iq;
 
 	public:
+		Brain();
 		std::string identify();
 	
 };
