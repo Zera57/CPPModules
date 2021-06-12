@@ -38,8 +38,8 @@
 		this->point = raw;
 	}
 	float Fixed::toFloat( void ) const {
-		return ((float)this->point / (1 << 8));
+		return ((float)this->point / (1 << this->fractional));
 	}
 	int Fixed::toInt( void ) const {
-		return (this->point / (1 << 8));
+		return (this->point / (1 << this->fractional));
 	}
