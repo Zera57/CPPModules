@@ -17,6 +17,21 @@ ClapTrap::~ClapTrap() {
     std::cout << "CL4P-TP is dead!(" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &F) : MaxHitPoints(F.MaxHitPoints), MaxEnergyPoints(F.MaxEnergyPoints) {
+    std::cout << "Copy constructor called" << std::endl;
+    *this = F;
+}
+void ClapTrap::operator = (const ClapTrap &F) {
+    std::cout << "Assignation operator called" << std::endl;
+    this->Name = F.Name;
+    this->ArmorDamageReduction = F.ArmorDamageReduction;
+    this->HitPoints = F.HitPoints;
+    this->EnergyPoints = F.EnergyPoints;
+    this->Level = F.Level;
+    this->MeleeAttackDamage = F.MeleeAttackDamage;
+    this->RangedAttackDamage = F.RangedAttackDamage;
+}
+
 void ClapTrap::rangedAttack(const std::string &target) {
     if (HitPoints > 0)
         std::cout << Name << " " << Name << " shoots the " << target << " dealing " << RangedAttackDamage << " points of damage." << std::endl;

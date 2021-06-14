@@ -17,6 +17,14 @@ ScavTrap::~ScavTrap() {
     std::cout << "SC4V-TP is dead, sir!(" << std::endl;
 }
 
+ScavTrap::ScavTrap(const ScavTrap &F) : ClapTrap(F) {
+    std::cout << "Copy constructor called" << std::endl;
+}
+void ScavTrap::operator = (const ScavTrap &F) {
+    std::cout << "Assignation operator called" << std::endl;
+    ClapTrap::operator=(F);
+}
+
 void ScavTrap::challengeNewcomer() {
     srand((unsigned int)time(0));
     if (HitPoints <= 0) {

@@ -15,6 +15,21 @@ FragTrap::~FragTrap() {
     std::cout << "I'm FR4G-TP and I'm dead!(" << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap &F) : MaxHitPoints(F.MaxHitPoints), MaxEnergyPoints(F.MaxEnergyPoints) {
+    std::cout << "Copy constructor called" << std::endl;
+    *this = F;
+}
+void FragTrap::operator = (const FragTrap &F) {
+    std::cout << "Assignation operator called" << std::endl;
+    this->Name = F.Name;
+    this->ArmorDamageReduction = F.ArmorDamageReduction;
+    this->HitPoints = F.HitPoints;
+    this->EnergyPoints = F.EnergyPoints;
+    this->Level = F.Level;
+    this->MeleeAttackDamage = F.MeleeAttackDamage;
+    this->RangedAttackDamage = F.RangedAttackDamage;
+}
+
 void FragTrap::rangedAttack(const std::string &target) {
     if (HitPoints > 0)
         std::cout << "FR4G-TP " << Name << " shoots " << target << ", and deal " << RangedAttackDamage << " points of damage." << std::endl;

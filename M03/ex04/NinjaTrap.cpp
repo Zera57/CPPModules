@@ -17,6 +17,13 @@ NinjaTrap::~NinjaTrap() {
     std::cout << "I'm NINJ4-TP and I'm dead!(" << std::endl;
 }
 
+NinjaTrap::NinjaTrap(const NinjaTrap &F) : ClapTrap(F) {
+    std::cout << "Copy constructor called" << std::endl;
+}
+void NinjaTrap::operator = (const NinjaTrap &F) {
+    std::cout << "Assignation operator called" << std::endl;
+    ClapTrap::operator=(F);
+}
 
 void NinjaTrap::ninjaShoebox(ClapTrap trap) {
     srand((unsigned int)time(0));

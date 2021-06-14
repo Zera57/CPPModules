@@ -36,4 +36,4 @@ private:
     unsigned int ArmorDamageReduction;
 };
 
-#endif //TEST_FRAGTRAP_HPP
+#endif

@@ -17,6 +17,14 @@ FragTrap::~FragTrap() {
     std::cout << "I'm FR4G-TP and I'm dead!(" << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap &F) : ClapTrap(F) {
+    std::cout << "Copy constructor called" << std::endl;
+}
+void FragTrap::operator = (const FragTrap &F) {
+    std::cout << "Assignation operator called" << std::endl;
+    ClapTrap::operator=(F);
+}
+
 
 void FragTrap::vaulthunter_dot_exe(const std::string &target) {
     srand((unsigned int)time(0));
