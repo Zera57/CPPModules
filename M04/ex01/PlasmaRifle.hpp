@@ -1,22 +1,19 @@
-#ifndef PEON_HPP
-#define PEON_HPP
+#ifndef PLASMARIFLE_HPP
+#define PLASMARIFLE_HPP
 
-#include "Victim.hpp"
+#include "AWeapon.hpp"
 
-class Peon : public Victim {
+class PlasmaRifle : public AWeapon {
 
-    public:
-        Peon(std::string name);
-        ~Peon();
-		Peon(const Peon&);
-		void operator = (const Peon& s);
-		virtual void getPolymorphed() const;
-		std::string GetName() const;
+	public:
+		PlasmaRifle();
+		virtual ~PlasmaRifle();
+		PlasmaRifle(const PlasmaRifle&);
+		void operator = (const PlasmaRifle& s);
+		void attack() const;
 
 	protected:
-		std::string _name;
+		
 };
-
-std::ostream & operator<< (std::ostream &out, Peon const& p);
 
 #endif
