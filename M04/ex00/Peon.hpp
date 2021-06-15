@@ -13,8 +13,6 @@ class Peon : public Victim {
 		virtual void getPolymorphed() const;
 		std::string GetName() const;
 
-	protected:
-		std::string _name;
 };
 
 std::ostream & operator<< (std::ostream &out, Peon const& p);
