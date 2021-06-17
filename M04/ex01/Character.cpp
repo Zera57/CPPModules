@@ -42,10 +42,9 @@ void Character::equip(AWeapon *weapon) {
 }
 
 void Character::attack(Enemy *enemy) {
-	if (weapon != NULL && ap - weapon->getAPCost() < 0)
+	if (weapon != NULL && ap - weapon->getAPCost() >= 0)
 	{
-		if (ap -= weapon->getAPCost() < 0)
-			ap = 0;
+		ap -= weapon->getAPCost();
 		std::cout << name << " attacks " << enemy->getType() << " with a " << weapon->getName() << std::endl;
 		weapon->attack();
 		enemy->takeDamage(weapon->getDamage());
