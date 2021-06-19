@@ -23,7 +23,7 @@ void parseChar(std::string const & value) {
 		int number = std::stoi(value);
 		if (number >= -128 && number <= 127) {
 			if (isprint(number))
-				std::cout << (char)number;
+				std::cout << static_cast<char>(number);
 			else
 				std::cout << "Non displayable";
 		}
