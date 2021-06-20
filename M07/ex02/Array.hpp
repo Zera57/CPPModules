@@ -9,7 +9,7 @@ class Array {
 		unsigned int	_size;
 		T				*_a;
 	public:
-		Array() { _size = 0, _a = nullptr; }
+		Array() { _size = 0, _a = NULL; }
 		Array(unsigned int size) {
 			T *temp =  new T();
 			_size = size;

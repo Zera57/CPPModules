@@ -7,9 +7,5 @@ int main( void ) {
 	{
 		std::cout << a[i] << std::endl;
 	}
-	while (true)
-	{
-		;
-	}
 	return 0;
 }

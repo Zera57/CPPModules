@@ -1,5 +1,5 @@
 CXX		  := clang++
-CXX_FLAGS := -Wall -Wextra -Werror -std=c++98 -I=iter.hpp
+CXX_FLAGS := -Wall -Wextra -Werror -std=c++98 -I=Array.hpp
 
 EXECUTABLE	:= a.out
 
