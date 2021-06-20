@@ -33,14 +33,14 @@ class Array {
 			for (size_t i = 0; i < _size; i++)
 				_a[i] = op._a[i];
 		}
-		class OutOfRangeExeption : public std::exception {
+		class OutOfRangeException : public std::exception {
 			virtual const char* what() const throw() {
-				return "OutOfRangeExeption";
+				return "OutOfRangeException";
 			}
 		};
 		T&	operator[](unsigned int i) {
 			if (i >= _size)
-				throw OutOfRangeExeption();
+				throw OutOfRangeException();
 			return _a[i];
 		}
 		unsigned int	size() {
